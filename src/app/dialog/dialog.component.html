@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>CrackTheCode - To Do</h1>
+<div mat-dialog-content>
+    <div *ngIf="items!=null">
+        <div *ngFor="let item of items">
+            <p class="paragraph" [ngStyle]="{'background-color':item.radioOptions}" (click)="perItem(item.id)"><span class="spantag">{{item.date}}</span>{{item.message}}<span *ngIf="item.file"><mat-icon aria-hidden="false" class="fileicon" aria-label="Example home icon">attach_file</mat-icon></span></p>
+        </div>
+    </div>
+    <button mat-stroked-button style="font-size: large;" (click)="nestedDialog()">ADD TO-DO</button>
+</div>
+<div mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Close</button>
+</div>

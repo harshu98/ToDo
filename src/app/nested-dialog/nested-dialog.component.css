@@ -1,0 +1,52 @@
+.title {
+    font-weight: bold;
+    margin-right: 16px;
+}
+
+.mat-radio-button {
+    margin-right: 15px;
+}
+
+.radioButton {
+    overflow: hidden;
+    display: flex;
+    flex: 50%;
+    font-size: 18px;
+    flex-direction: row;
+    flex-basis: 100%;
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.twinbutton {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between
+}
+
+.text-full-width {
+    margin-top: 10px;
+    min-height: 60px;
+    background: rgb(220, 207, 207);
+    border: 1px solid gray;
+    font-weight: bold;
+    width: 100%;
+    color: black;
+}
+
+.actionItem {
+    justify-content: space-between;
+}
+
+::ng-deep .mat-dialog-container {
+    border-radius: 20px !important;
+    overflow: hidden;
+}
+
+.footer-form-field {
+    margin-top: 20px;
+    width: 200px;
+}

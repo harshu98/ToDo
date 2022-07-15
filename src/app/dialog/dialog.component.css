@@ -1,0 +1,34 @@
+.mat-stroked-button {
+    width: 100%;
+    height: 50px;
+}
+
+.mat-dialog-close {
+    bottom: 0;
+}
+
+.paragraph {
+    padding: 16px;
+    font-size: large;
+    border-radius: 10px;
+    position: relative;
+}
+
+.spantag {
+    font-size: 8px;
+    position: absolute;
+    top: 0;
+}
+
+.fileicon {
+    position: absolute;
+    right: 10px;
+    transform: rotate(135deg)
+}
+
+
+/* 
+::ng-deep .mat-button-ripple {
+    border-style: dotted;
+    color: black;
+} */

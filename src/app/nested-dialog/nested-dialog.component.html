@@ -1,0 +1,32 @@
+<h1 mat-dialog-title class="title">Add To do item</h1>
+<div class="radioButton">
+    <div class="title">Type:</div>
+    <div>
+        <mat-radio-group aria-label="Select an option" (change)="radiochange($event)">
+            <mat-radio-button *ngFor="let option of radioOptions" [checked]="option.checked" value="{{option.value}}">{{option.label}}
+            </mat-radio-button>
+        </mat-radio-group>
+    </div>
+</div>
+<textarea placeholder="Your Note goes here... " class="text-full-width " [(ngModel)]="textInput"></textarea>
+<div mat-dialog-actions class="actionItem">
+    <button mat-button mat-flat-button color="primary" (click)="addData()">Add</button>
+    <button mat-button mat-flat-button color="accent" [disabled]="status" (click)="updateData()">Update</button>
+    <button mat-button mat-flat-button color="warn" (click)="deleteData()">Delete</button>
+    <button mat-button mat-dialog-close>Close</button>
+</div>
+<div class="twinbutton">
+    <div *ngIf="notedate">
+        <form [formGroup]="form">
+            <mat-form-field appearance="fill" class="footer-form-field">
+                <input matInput [matDatepicker]="matDatepicker" datePickerFormat="Do MMMM YYYY" formControlName="format2" />
+                <mat-datepicker-toggle matSuffix [for]="matDatepicker"></mat-datepicker-toggle>
+                <mat-datepicker #matDatepicker></mat-datepicker>
+            </mat-form-field>
+        </form>
+    </div>
+    <div *ngIf="attachments">
+        <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+        <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+    </div>
+</div>
